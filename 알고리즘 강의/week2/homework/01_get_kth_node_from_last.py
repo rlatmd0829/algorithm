@@ -15,8 +15,16 @@ class LinkedList:
         cur.next = Node(value)
 
     def get_kth_node_from_last(self, k):
-        # 구현해보세요!
-        return self.head
+        slow = self.head
+        fast = self.head
+
+        for i in range(k):
+            fast = fast.next
+
+        while fast is not None:
+            fast = fast.next
+            slow = slow.next
+        return slow
 
 
 linked_list = LinkedList(6)
