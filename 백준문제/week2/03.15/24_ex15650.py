@@ -58,7 +58,7 @@ def dfs(cnt):
             
             arr.pop()
 
-            #순열 부분과의 차이점
+            #순열 부분과의 차이점, i보다 큰값만 출력하기 위해 0으로만들어줌
             for j in range(i+1, N):
                 visited[j] = 0
     
