@@ -64,6 +64,9 @@ def bfs(node,V):
 dfs(node, V, visited)
 b_node = bfs(node, V)
 
+# print(*b_node)
+
+
 for i in visited:
     print(i, end=" ")
 print()
