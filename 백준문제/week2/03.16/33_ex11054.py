@@ -1,13 +1,13 @@
 N = int(input())
 lst = list(map(int, input().strip().split()))
 
-dp = [0 for i in range(N)]
+dp = [0 for i in range(N)] # 수열의 길이를 담는 리스트이다.
 dp2 = [0 for i in range(N)]
 
 
 # 정방향으로 LIS를 찾는다.
 for i in range(N):
-    for j in range(i):
+    for j in range(i): # i전 까지 값을 가지고 i와 비교한다.
         if (lst[i] > lst[j] and dp[i] < dp[j]): # lst[i]보다 작은 값이면서 가장 긴 수열에 길이를 받아서 dp[i]에 넣는다.
             dp[i] = dp[j]
     dp[i] += 1

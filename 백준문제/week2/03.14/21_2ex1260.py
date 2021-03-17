@@ -10,11 +10,12 @@ for i in range(m):
     node[line[0]][line[1]] = 1
     node[line[1]][line[0]] = 1
 
+print(node)
 
 
 def dfs (node, start, visited):
     visited.append(start)
-    for i in range(1, n+1):
+    for i in range(1, n+1): # 정점이 0이 없고 1~n까지 밖에 없어서 1이 있을곳은 1~n까지 이기때문에 범위를 이렇게 잡는다.
         if node[start][i] and i not in visited: # node[start][i] 가 1이어야한다.
             visited = dfs(node, i, visited)
     return visited

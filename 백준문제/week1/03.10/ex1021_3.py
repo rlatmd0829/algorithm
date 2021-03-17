@@ -8,7 +8,7 @@ queue = deque(range(1, n+1))
 total = 0
 
 for idx in range(m):
-    if numbers[idx] == deque[0]:
+    if numbers[idx] == queue[0]:
         queue.popleft()
         continue
     queue_idx = queue.index(numbers[idx])
@@ -25,3 +25,4 @@ for idx in range(m):
     queue.popleft()
 
 print(total)
+

@@ -17,7 +17,7 @@
 #                 break
         
 #     if not double_break: # double_break가 false일 경우
-#         if matrix[y][x] == 1: # 파란색이라면 ,,,, 이해가 잘안감
+#         if matrix[y][x] == 1: # 맨위 for문이 끝났고 여기 왔다는 소리는 matrix[y][x]랑 범위안에 있는 것들이 전부 같다는 뜻이므로 한개만 확인하면 된다.
 #             blue += 1
 #         else:
 #             white += 1 # 흰색이라면

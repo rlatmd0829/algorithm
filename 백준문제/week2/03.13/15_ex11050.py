@@ -18,3 +18,16 @@ def fac(a): # k가 입력값으로 0이 들어올 수 있으므로 0에대한 �
 
 print(fac(n) // (fac(n-k) * fac(k)))
 
+###################################
+
+# from itertools import combinations
+
+# n , k = map(int,input().split())
+# cnt = 0
+# node = []
+# for i in range(1,n+1):
+#     node.append(i)
+# print(node)
+# for i in combinations(node,k):
+#     cnt += 1
+# print(cnt)

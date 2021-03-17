@@ -13,19 +13,36 @@
 ###################################################
 
 
-# def abc(x):
-#     return (x[1], x[0])
+# # def abc(x):
+# #     return (x[1], x[0])
 
-T = int(input())
-a = []
+# T = int(input())
+# a = []
 
-for i in range(T):
-    a.append(list(map(int, input().split()))) # [[x,y], [x,y], [x,y]]
-a.sort(key=abc) # a 인자값을 abc로 보내서 리턴값으로 비교후 정렬
-for i in a:
-    print(i[0], i[1])
+# for i in range(T):
+#     a.append(list(map(int, input().split()))) # [[x,y], [x,y], [x,y]]
+# a.sort(key=abc) # a 인자값을 abc로 보내서 리턴값으로 비교후 정렬
+# for i in a:
+#     print(i[0], i[1])
 
-# lambda x : (x[1], x[0]) == def abc(x):
-#                               return (x[1], x[0]) 
+# # lambda x : (x[1], x[0]) == def abc(x):
+# #                               return (x[1], x[0]) 
 
+
+
+
+
+
+
+
+#########################
+
+N = int(input())
+node = []
+for i in range(N):
+    node.append(list(map(int,input().split())))
+node.sort(key = lambda x: (x[1],x[0]))
+
+for i in node:
+    print(*i)
 
