@@ -1,13 +1,11 @@
+answer = []
 
-N, K = map(int, input().split())
-node= list(map(int, input().split()))
-node.sort()
-Sum = len(node)
-cnt = 0
-while True:
-    if Sum <= 0:
-        break
-    Sum = Sum - K + 1
-    cnt += 1
+arr1 = [[1,2],[2,3]]
+arr2 = [[3,4],[5,6]]
 
-print(cnt)
+for i in range(len(arr1)):
+    tmp = []
+    for j in range(len(arr1[i])):
+        tmp.append(arr1[i][j] + arr2[i][j])
+    answer.append(tmp)
+print(answer)
