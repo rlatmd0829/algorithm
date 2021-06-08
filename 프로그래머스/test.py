@@ -1,6 +1,4 @@
-B= [4,2,6,8,3]
+land = [[1,2,3,5],[5,6,7,8],[4,3,2,1]]
 
-# B.sort(reverse=True)
-# print(B)
-B.reverse()
-print(B)
+print(land[0][:1] + land[0][2:])
+print(land[0][:1])
