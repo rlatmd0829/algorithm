@@ -15,3 +15,5 @@ def solution(cacheSize, cities):
             if len(stack) > cacheSize:
                 stack.pop(0)
     return answer
+
+    
