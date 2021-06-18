@@ -9,3 +9,4 @@ for i in range(2, 41):
 for _ in range(int(input())):
     n = int(input())
     print(cnt0[n], cnt1[n])
+
