@@ -1,7 +1,8 @@
 n = int(input())
-grape = [0] * 100
-grape = [int(input()) for _ in range(n)]
-print(grape)
+grape = [0] * 10000
+for i in range(n):
+    grape[i] = int(input())
+
 dp = [0] * 10000
 dp[0] = grape[0]
 dp[1] = grape[1] + grape[0]
