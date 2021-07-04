@@ -29,4 +29,3 @@ if check:
     print(distance[cur])
 else:
     print(-1)
-
