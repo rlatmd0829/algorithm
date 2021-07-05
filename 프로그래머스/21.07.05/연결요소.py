@@ -27,3 +27,6 @@ for i in range(1, n+1):
         answer += 1
 
 print(answer)
+
+# python3로 제출하면 시간초과뜸 pypy는 시간초과안뜸
+# dfs로 푸는게 맞는듯
