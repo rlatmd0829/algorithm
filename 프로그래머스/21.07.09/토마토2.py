@@ -13,7 +13,6 @@ for z in range(h):
         for y in range(m):
             if graph[z][x][y] == 1 and check[z][x][y] == 0:
                 queue.append((z,x,y))
-                check[z][x][y] = 1
 
 
 def bfs():
@@ -33,20 +32,16 @@ def bfs():
 
 
 bfs()
-checker = True
-
 for i in graph:
     for j in i:
         if 0 in j:
             print(-1)
             checker = False
-            sys.exit()
+            sys.exit() # break 해주면 for문 한개만 나가기 떄문에 sys.exit()를 사용해준다.
 curMax = 0
 
 for i in check:
     for j in i:
-        list_max = max(j)
-        curMax = max(curMax, list_max)
+        curMax = max(curMax, max(j))
 
-#if checker:
-print(curMax-1)
+print(curMax)
