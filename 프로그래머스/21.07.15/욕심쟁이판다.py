@@ -17,7 +17,7 @@ def dfs(x,y):
             ny = y + dy[i]
             if 0 <= nx < n and 0 <= ny < n:
                 if graph[x][y] < graph[nx][ny]:
-                    distance[x][y] = max(distance[x][y], dfs(nx,ny))
+                    distance[x][y] = max(distance[x][y], dfs(nx,ny)) # x,y에 주변을 검사해 가장 큰값에 +1을 해주면 현재 좌표에 가장 큰 값이 들어가게 된다.
         distance[x][y] += 1
     
     return distance[x][y]
