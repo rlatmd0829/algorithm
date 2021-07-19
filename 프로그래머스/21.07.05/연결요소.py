@@ -2,6 +2,7 @@ import collections
 n, m = map(int, input().split())
 
 graph = collections.defaultdict(list)
+print(graph)
 answer = 0
 distance = [-1 for _ in range(n+1)]
 
@@ -10,6 +11,7 @@ for i in range(m):
     graph[x].append(y)
     graph[y].append(x)
 
+print(graph)
 def bfs(index):
     queue = collections.deque([])
     queue.append(index)
