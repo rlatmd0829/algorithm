@@ -1,8 +1,11 @@
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**9)
+
 n, r, q = map(int, input().split())
 
 graph = [[] for _ in range(n+1)]
 visited = [0 for _ in range(n+1)]
-dp = [0 for _ in range(n+1)]
 
 for i in range(n-1):
     x, y = map(int, input().split())
@@ -18,4 +21,4 @@ def dfs(cur):
 dfs(r)
 for i in range(q):
     print(visited[int(input())])
-print(visited)
+

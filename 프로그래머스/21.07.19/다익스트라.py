@@ -1,6 +1,7 @@
 import sys
 import heapq
 
+input = sys.stdin.readline
 V, E = map(int, input().split())
 
 K = int(input())
@@ -19,16 +20,12 @@ def dijkstra(start):
 
     while heap:
         wei, now = heapq.heappop(heap)
-
         if distance[now] < wei:
             continue
-
         for w, next_node in graph[now]:
             # 현재 정점 까지의 가중치 wei + 현재 정점에서 다음 정점(next_node) 까지의 가중치 w
-            
             # 다음 노드까지의 가중치 next_wei
             next_wei = w + wei
-
             if next_wei < distance[next_node]:
                 distance[next_node] = next_wei
                 heapq.heappush(heap, (next_wei, next_node))

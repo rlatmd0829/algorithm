@@ -1,10 +1,12 @@
+import sys
+sys.setrecursionlimit(10**6)
 n = int(input())
 
 graph = [[] for _ in range(n+1)]
 
 cost = [0]+list(map(int, input().split()))
 visited = [0 for _ in range(n+1)]
-dp = [[0, 0] for _ in range(n+1)]
+dp = [[0, 0] for _ in range(n+1)] # dp[i][1] 일때 현재마을이 우수마을, dp[i][0] 일때 현재마을이 우수마을 X
 
 
 for i in range(n-1):
@@ -14,7 +16,7 @@ for i in range(n-1):
 
 def dfs(cur):
     visited[cur] = 1
-    dp[cur][1] = cost[cur] # 현재마을을 우수마을로 포함했으니까 현재마을에 cost를 더해준다.
+    dp[cur][1] = cost[cur] # 현재마을을 우수마을로 포함했으니까 현재마을에 cost를 가진채로 dfs를 시작한다.
     for next in graph[cur]:
         if not visited[next]:
             dfs(next)
