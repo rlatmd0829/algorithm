@@ -25,7 +25,7 @@ def solution(m, n, puddles):
                         graph[nx][ny] += graph[x][y]
                         queue.append((nx,ny))
                     elif graph[nx][ny] != -1:
-                        graph[nx][ny] += graph[x][y] # 방문했던 곳이여도 경우의 수를 늘리기 위해 더해준다.
+                        graph[nx][ny] += graph[x][y] # 방문했던 곳이여도 경우의 수는 늘리기 위해 더해준다.
     bfs()
     print(graph)
     return (graph[n-1][m-1]) % 1000000007
