@@ -27,47 +27,47 @@ def solution(n, results):
 
 # bfs 풀이 실패
 
-import collections
-def solution(n, results):
-    answer = 0
-    graph = [[] for _ in range(n+1)]
-    distance = [[0 for _ in range(n+1)] for _ in range(n+1)]
+# import collections
+# def solution(n, results):
+#     answer = 0
+#     graph = [[] for _ in range(n+1)]
+#     distance = [[0 for _ in range(n+1)] for _ in range(n+1)]
     
-    queue = collections.deque()
+#     queue = collections.deque()
     
-    for result in results:
-        graph[result[0]].append(result[1])
-        #graph[result[1]].append(result[0])
+#     for result in results:
+#         graph[result[0]].append(result[1])
+#         #graph[result[1]].append(result[0])
         
-    def bfs(index):
-        visited = [False for _ in range(n+1)]
-        queue.append(index)
-        while queue:
-            cur = queue.popleft()
-            visited[cur] = True
-            for next in graph[cur]:
-                if visited[next] == False:
-                    distance[index][next] =1
-                    visited[next] = True
-                    queue.append(next)
+#     def bfs(index):
+#         visited = [False for _ in range(n+1)]
+#         queue.append(index)
+#         while queue:
+#             cur = queue.popleft()
+#             visited[cur] = True
+#             for next in graph[cur]:
+#                 if visited[next] == False:
+#                     distance[index][next] =1
+#                     visited[next] = True
+#                     queue.append(next)
         
-    for i in range(1,n+1):
-        bfs(i)
-    print(distance)
-    for i in range(1,len(distance)-1):
-        for j in range(1, len(distance)):
-            distance[i+1][j] += distance[i][j]
-    cnt = 0
-    distance[n].sort(reverse=True)
-    print(distance[n])
+#     for i in range(1,n+1):
+#         bfs(i)
+#     print(distance)
+#     for i in range(1,len(distance)-1):
+#         for j in range(1, len(distance)):
+#             distance[i+1][j] += distance[i][j]
+#     cnt = 0
+#     distance[n].sort(reverse=True)
+#     print(distance[n])
     
-    if distance[n][0] != 0:
-        answer += 1
+#     if distance[n][0] != 0:
+#         answer += 1
     
-    for i in range(1,n):
-        if distance[n].count(distance[n][i]) == 1:
-            if distance[n][i-1] - distance[n][i] == 1:
-                answer += 1
-        else:
-            break
-    return answer
+#     for i in range(1,n):
+#         if distance[n].count(distance[n][i]) == 1:
+#             if distance[n][i-1] - distance[n][i] == 1:
+#                 answer += 1
+#         else:
+#             break
+#     return answer
