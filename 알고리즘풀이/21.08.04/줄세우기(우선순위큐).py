@@ -1,12 +1,12 @@
-# 가능하면 쉬운문제부터 풀어야하므로 우선순위큐를 사용해준다.
-import heapq
 
+import heapq
 n, m = map(int, input().split())
+
 graph = [[] for _ in range(n+1)]
 distance = [0 for _ in range(n+1)]
 
 for i in range(m):
-    x,y = map(int, input().split())
+    x, y = map(int, input().split())
     graph[x].append(y)
     distance[y] += 1
 
@@ -22,4 +22,4 @@ while queue:
     for next in graph[cur]:
         distance[next] -= 1
         if distance[next] == 0:
-            heapq.heappush(queue, next)
+            heapq.heappush(queue, next)        
