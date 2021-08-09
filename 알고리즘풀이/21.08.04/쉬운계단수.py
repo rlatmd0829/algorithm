@@ -1,4 +1,4 @@
-# 답지봄
+
 n = int(input())
 dp = [[0]*10 for _ in range(n+1)]
 
@@ -16,7 +16,7 @@ for i in range(2,n+1):
 print(dp)
 print(sum(dp[n]) % 1000000000)
 
-
+# 답지봄
 # 맨뒤에 올 수 있는 숫자의 개수(0~9)
 
 #           0 1 2 3 4 5 6 7 8 9

@@ -1,4 +1,4 @@
-# dp 풀이 답지봄
+
 t = int(input())
 
 dp = [[0]*30 for _ in range(30)]
