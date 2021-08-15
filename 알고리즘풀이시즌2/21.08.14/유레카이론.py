@@ -1,3 +1,4 @@
+# 유레카이론 부터
 from itertools import combinations
 t = int(input())
 

@@ -6,7 +6,7 @@ answer = []
 for i in com:
     if sum(i) == 100:
         answer.extend(i)
-print(answer)
+
 for i in answer:
     print(i)
 
