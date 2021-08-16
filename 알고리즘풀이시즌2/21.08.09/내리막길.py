@@ -1,4 +1,4 @@
-# 답지봄, 다시풀어보기
+# 다시풀어보기
 # 그냥 dfs로 풀면 시간초과 dfs + dp로 풀어야함
 import sys
 sys.setrecursionlimit(10 ** 8)
