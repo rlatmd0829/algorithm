@@ -1,9 +1,10 @@
 import collections
-t = int(input())
+import sys
 
+t = int(input())
+input = sys.stdin.readline
 for i in range(t):
     n, m = map(int, input().split())
-
     graph = [[] for _ in range(n+1)]
     check = [0 for _ in range(n+1)]
     for j in range(m):
@@ -12,7 +13,6 @@ for i in range(t):
         graph[y].append(x)
     
     queue = collections.deque()
-    result = []
     
     def bfs(start):
         queue.append(start)
@@ -22,6 +22,7 @@ for i in range(t):
             for next in graph[cur]:
                 if check[next] == 0:
                     check[next] = check[cur] * -1
+                    queue.append(next)
                 elif check[next] == check[cur]:
                     return False
         return True
@@ -31,7 +32,7 @@ for i in range(t):
             chk = bfs(j)
             if chk == False:
                 break
-    if check:
+    if chk:
         print("YES")
     else:
         print("NO")

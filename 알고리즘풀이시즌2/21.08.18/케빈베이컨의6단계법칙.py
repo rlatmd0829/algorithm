@@ -28,7 +28,6 @@ for i in range(1,n+1):
     visited = [False for _ in range(n+1)]
     bfs(i)
     result.append([sum(distance), i])
-print(result)
+
 result.sort()
-print(result)
 print(result[0][1])
