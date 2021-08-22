@@ -14,11 +14,12 @@ while l <= r:
     for i in value:
         if i > mid:
             answer += i - mid
-    
-    if answer >= m:  # 상근이는 환경에 매우 관심이 많기 때문에, 나무를 필요한 만큼만 집으로 가져가려고 한다.
-                     # answer == m 일때가 가장 높이가 큰경우 아닌가..?
-        l = mid + 1
+    if answer == m:
         check = mid
+        break
+    if answer > m:   
+        l = mid + 1 # m == answer이 안나오는 경우도 있을 수 있다.
+        #check = mid
     else:
         r = mid - 1
 print(check)
