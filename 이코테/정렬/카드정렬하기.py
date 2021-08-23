@@ -5,7 +5,7 @@ n = int(input())
 answer = 0
 value = [int(input()) for _ in range(n)]
 
-
+heapq.heapify(value)
 if n == 1:
     print(0)
 else:
