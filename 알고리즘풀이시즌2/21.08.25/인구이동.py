@@ -1,4 +1,11 @@
+# python3 시간초과
+# pypy로 제출
+# 풀이참고
+
 import collections
+import sys
+
+input = sys.stdin.readline
 n, l, r = map(int, input().split())
 
 graph = [list(map(int,input().split())) for _ in range(n)]
@@ -41,7 +48,7 @@ while True:
         for j in range(n):
             if visited[i][j] == False:
                 check = bfs(i,j,graph[i][j])
-                if check:
+                if check: # 한번이라도 인구이동 했으면 한번 더 돌아야함
                     chk = True
 
     if not chk:

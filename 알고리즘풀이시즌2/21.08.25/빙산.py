@@ -1,3 +1,6 @@
+# python3 시간초과
+# pypy로 제출
+
 import collections
 import sys
 
@@ -34,7 +37,7 @@ while True:
     check = 0
     
     for i in range(n):
-        for j in range(n):
+        for j in range(m):
             if graph[i][j] != 0 and visited[i][j] == False:
                 bfs(i,j)
                 check += 1
