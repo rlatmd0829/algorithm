@@ -1,5 +1,5 @@
 # 위상정렬 문제
-# dp를 써야하는지 몰랐다
+# dp 생각못함
 
 import collections
 import sys
