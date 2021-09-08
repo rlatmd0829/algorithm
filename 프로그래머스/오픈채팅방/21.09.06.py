@@ -5,7 +5,7 @@ def solution(record):
     for i in record:
         i = i.split()
         if i[0] == 'Enter':
-            result[i[1]] = (i[2])
+            result[i[1]] = i[2]
         elif i[0] == 'Change':
             result[i[1]] = i[2]
     
