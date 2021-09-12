@@ -12,4 +12,5 @@ for i in range(1,n+1):
         else:
             dp[i][j] = max(dp[i-1][j], dp[i-1][j-weight] + value)
 
+
 print(dp[n][k])
