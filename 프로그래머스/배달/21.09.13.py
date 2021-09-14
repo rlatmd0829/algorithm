@@ -10,6 +10,7 @@ def solution(N, road, K):
         graph[a].append((c,b))
         graph[b].append((c,a))
     
+    
     queue = []
     heapq.heappush(queue, (0, 1))
     distance[1] = 0
