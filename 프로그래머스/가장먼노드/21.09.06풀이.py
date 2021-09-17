@@ -10,6 +10,7 @@ def solution(n, edge):
         graph[b].append(a)
     
     
+    
     def bfs(index):
         queue.append(index)
         while queue:
