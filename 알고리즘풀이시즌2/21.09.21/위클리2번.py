@@ -15,6 +15,7 @@ def solution(scores):
             if demo.index(minn) == i:
                 demo.remove(minn)
                 
+                
         avg.append(sum(demo) / len(demo))
     
     for i in avg:
